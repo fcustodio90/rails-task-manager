@@ -1,0 +1,16 @@
+<h1>MY TASKS</h1>
+
+<% @tasks.each do |task|  %>
+  <div class="container">
+    <% if task.completed %>
+      <%= image_tag "https://img.icons8.com/ios/50/000000/checked-checkbox-filled.png" %>
+    <% else  %>
+      <%= image_tag "https://img.icons8.com/ios/50/000000/unchecked-checkbox-filled.png"  %>
+    <% end %>
+      <p><%= link_to task.title, task_path(task) %></p>
+  </div>
+<% end %>
+
+<div class="container">
+  <%= link_to "Create a task", new_path  %>
+</div>
