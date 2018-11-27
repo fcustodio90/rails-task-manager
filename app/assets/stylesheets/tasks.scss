@@ -4,14 +4,15 @@
 
 .container {
   display: flex;
-  padding: 10px;
-  margin: 5px;
+  padding: 20px;
+  margin: 30px;
   align-items: center;
   justify-content: center;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-h1 {
-  text-align: center;
+a {
+  padding: 5px;
+  background-color: black;
 }
-
-

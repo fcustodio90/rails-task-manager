@@ -1,4 +1,6 @@
-<h1>MY TASKS</h1>
+<div class="container">
+  <h1>MY TASKS</h1>
+</div>
 
 <% @tasks.each do |task|  %>
   <div class="container">
@@ -7,10 +9,17 @@
     <% else  %>
       <%= image_tag "https://img.icons8.com/ios/50/000000/unchecked-checkbox-filled.png"  %>
     <% end %>
-      <p><%= link_to task.title, task_path(task) %></p>
+      <%= link_to task.title, task_path(task) %>
+
+      <%= link_to task_path(task.id), method: :delete, data: { confirm: "Are you sure?"} do %>
+        <i class="fa fa-trash"></i>
+      <% end %>
   </div>
 <% end %>
 
 <div class="container">
   <%= link_to "Create a task", new_path  %>
 </div>
+
+
+

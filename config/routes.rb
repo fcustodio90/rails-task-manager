@@ -4,16 +4,7 @@ Rails.application.routes.draw do
   get '/new', to: 'tasks#new'
   get 'tasks/:id', to: 'tasks#show', as: 'task'
   post 'tasks', to: 'tasks#create'
-
-  #post   "restaurants",          to: "restaurants#create"
-
-
-  # NB: The `show` route needs to be *after* `new` route.
-
-  #get    "restaurants/:id/edit", to: "restaurants#edit"
-  #patch  "restaurants/:id",      to: "restaurants#update"
-  #delete "restaurants/:id",      to: "restaurants#destroy"
-
-
-
+  get 'tasks/:id/edit', to: 'tasks#edit', as: 'edit'
+  patch 'tasks/:id', to: 'tasks#update'
+  delete 'tasks/:id', to: 'tasks#destroy'
 end
